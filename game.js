@@ -37,8 +37,9 @@ var randomNumber = Math.floor(Math.random()*4);
 randomChosenColour = buttonColours[randomNumber];
 // console.log(randomChosenColour);
 gamePattern.push(randomChosenColour);
-
-
+    
+$('#level-title').html(level);
+level++;
 
 for(var k=0; k<=gamePattern.length; k++){
 
@@ -49,8 +50,8 @@ var myaudio = new Audio('sounds/'+gamePattern[k]+'.mp3');
 myaudio.play();
 
 }
-$('#level-title').html(level);
-level++;
+
+
 console.log(level);
 console.log(gamePattern);
 console.log(gamePattern.length);
